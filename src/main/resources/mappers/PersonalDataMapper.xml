@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yi.mapper.PersonalData">
+	<select id="selectList" resultType="PersonalData">
+		select * from personal_data where id=#{id}
+	</select>
+	<insert id="insertData">
+		insert into personal_data(id, regdate, file) values (#{id}, #{regdate}, #{file});
+	</insert>
+	<delete id="deleteData">
+		delete from personal_data where no=#{no}
+	</delete>
+	
+	<select id="selectMyList" parameterType="map" resultType="PersonalData">
+		select * from personal_data
+		where id=#{id}
+		order by no desc
+		limit #{cri.pageStart}, #{cri.perPageNum}
+	</select>
+</mapper>
+
+
+
+
+
+

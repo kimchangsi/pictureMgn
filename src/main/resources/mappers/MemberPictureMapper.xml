@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yi.mapper.MemberPicture">
+	<insert id="insertMember" parameterType="MemberPicture">
+		insert into member_picture(id,name,email,tel,pass) values(#{id}, #{name}, #{email}, #{tel}, #{pass})
+	</insert>
+	<select id="selectMember" parameterType="MemberPicture" resultType="MemberPicture">
+		select * from member_picture where id=#{id}
+	</select>
+</mapper>
+
+
+
+
+
+
