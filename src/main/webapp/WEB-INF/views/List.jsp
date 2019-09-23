@@ -120,10 +120,10 @@
 <script type="text/javascript">
 	$(function(){
 		$(".cancel").click(function(){
-		var a = confirm("삭제하시겠습니까?");
+		/* var a = confirm("삭제하시겠습니까?");
 			if(a==false){
 				return false;
-			}
+			} */
 		})
 		
 		$(document).on("click",".img",function(){
@@ -157,7 +157,7 @@
 					<p class="uploadName"><b>파일명</b> : ${list.originFileName }</p>
 				</div>
 				<img src="displayFile?filename=${list.file }" class="img" data-origin="${list.originFile }">         
-				<a href="delete?no=${list.no }&file=${list.file }" class="cancel">X</a>
+				<a href="<%-- delete?no=${list.no }&file=${list.file } --%>#" class="cancel">X</a>
 			</div>
 		</c:forEach>
 		
